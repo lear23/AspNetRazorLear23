@@ -1,0 +1,12 @@
+﻿@page
+@model IndexModel
+@{
+    ViewData["Title"] = "Home page";
+}
+
+
+<div>
+    <partial name="~/Pages/Shared/Partials/HomePartials/_Showcase.cshtml" />
+
+    @await Html.PartialAsync("~/Pages/Shared/Partials/HomePartials/_Feature.cshtml")
+</div>
