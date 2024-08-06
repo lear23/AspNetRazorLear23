@@ -1,4 +1,38 @@
 ﻿<div class="container">
+    <a id="logo" asp-page="/Index"><img src="~/Images/Lear23.svg" alt="Logo"></a>
+
+    <div id="menu" class="pt-4">
+        <a asp-page="/Index" class="hover:text-white mr-4">Overview</a>
+        <a asp-page="/Features" class="hover:text-white mr-4">Features</a>
+        <a asp-page="/Contact" class="hover:text-white mr-4">Contact</a>
+    </div>
+
+    <div class="account-buttons">
+        <a asp-page="/SignIn" class="btn-theme"><i class="fa-solid fa-right-to-bracket"></i><span>Sign in</span></a>
+        <a asp-page="/SignUp" class="btn-theme"><i class="fa-solid fa-user"></i><span>Sign up</span></a>
+    </div>
+
+    <button id="abrir" class="open-menu btnmenu"><i class="fa-solid fa-bars"></i></button>
+    <nav class="btn-mobile" id="nav">
+        <button class="close-menu btnmenu" id="cerrar"><i class="fa-regular fa-rectangle-xmark"></i></button>
+        <ul class="nav-list">
+            <li><a asp-page="/Index" class="menu-link">Overview</a></li>
+            <li><a asp-page="/Features" class="menu-link">Features</a></li>
+            <li>
+                @if (Context.Request.Path != "/SignIn" && Context.Request.Path != "/SignUp")
+                {
+                    <a asp-page="/Contact" class="menu-link">Contact</a>
+                }
+            </li>
+            <li><a asp-page="/SignIn" class="btn-gray"><i class="fa-solid fa-right-to-bracket"></i><span>Sign in</span></a></li>
+            <li><a asp-page="/SignUp" class="btn-theme"><i class="fa-solid fa-user"></i><span>Sign up</span></a></li>
+        </ul>
+    </nav>
+</div>
+
+
+
+@* <div class="container">
 
     <a id="logo" asp-controller="Home" asp-action="Home"><img src="@Url.Content("~/Images/Lear23.svg")" alt=""></a>
 
@@ -33,7 +67,7 @@
             <li><a asp-controller="Auth" asp-action="SignUp" class="btn-theme"><i class="fa-solid fa-user"></i><span>Sign up</span></a></li>
         </ul>
     </nav>
-</div>
+</div> *@
 
 
 
