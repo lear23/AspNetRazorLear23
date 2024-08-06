@@ -1,0 +1,53 @@
+﻿@page
+@model AspNetRazorLear23.Pages.SignUpModel
+@{
+
+    ViewData["Title"] = "Sign up";
+}
+
+<section id="createAccount">
+    <div class="container">
+        <form method="post">
+            <h1>Create Account</h1>
+            <p class="text-xs">Already have an account? <a href="/SignIn">Sign in here.</a></p>
+
+            <div class="klientInfo">
+                <div class="klientbox">
+                    <label for="FirstName"><b>First name</b></label>
+                    <input id="FirstName" name="FirstName" placeholder="Enter your first name">
+                    <span class="text-danger"></span>
+                </div>
+                <div class="klientbox">
+                    <label for="LastName"><b>Last name</b></label>
+                    <input id="LastName" name="LastName" placeholder="Enter your last name">
+                    <span class="text-danger"></span>
+                </div>
+            </div>
+            <div class="createBox">
+                <label for="Email"><b>Email address</b></label>
+                <input id="Email" name="Email" placeholder="Enter your email address">
+                <span class="text-danger"></span>
+            </div>
+            <div class="createBox">
+                <label for="Password"><b>Password</b></label>
+                <input id="Password" name="Password" type="password" placeholder="********">
+                <span class="text-danger"></span>
+            </div>
+            <div class="createBox">
+                <label for="ConfirmPassword"><b>Confirm Password</b></label>
+                <input id="ConfirmPassword" name="ConfirmPassword" type="password" placeholder="********">
+                <span class="text-danger"></span>
+            </div>
+
+            <div>
+                <input id="TermsConditions" name="TermsConditions" type="checkbox">
+                <label for="TermsConditions">
+                    I agree to the <a href="/Terms">Terms</a> & <a href="/Conditions">Conditions</a>.
+                </label>
+                <span class="text-danger"></span>
+            </div>
+
+            <button class="btn-theme" type="submit">Sign Up</button>
+        </form>
+    </div>
+</section>
