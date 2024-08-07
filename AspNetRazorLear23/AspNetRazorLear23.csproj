@@ -9,7 +9,23 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Content Remove="Pages\SignIn.cshtml" />
+  </ItemGroup>
+
+  <ItemGroup>
     <PackageReference Include="Microsoft.VisualStudio.Azure.Containers.Tools.Targets" Version="1.20.1" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <UpToDateCheckInput Remove="Pages\SignIn.cshtml" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <_ContentIncludedByDefault Remove="Pages\SignIn.cshtml" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="Pages\SignIn.cshtml" />
   </ItemGroup>
 
 </Project>
